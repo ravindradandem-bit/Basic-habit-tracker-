@@ -61,8 +61,12 @@ export function HeaderTile({
           </button>
 
           <div className="hidden sm:flex items-center text-xs font-mono tabular-nums text-gray-200 bg-black/45 border border-white/10 px-3 py-2 rounded-xl whitespace-nowrap shrink-0">
-            SUN, NOV 15
-          </div>
+  {new Date().toLocaleDateString('en-US', {
+    weekday: 'short',
+    month: 'short',
+    day: 'numeric'
+  }).toUpperCase()}
+</div>
         </div>
       </div>
 
